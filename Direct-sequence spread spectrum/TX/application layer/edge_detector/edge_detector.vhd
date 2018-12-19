@@ -1,0 +1,52 @@
+-- Author: Felix Lerner
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity edge_detector is
+port(
+	clk : in std_logic;
+	rst : in std_logic;
+	input : in std_logic;
+	clk_enable : in std_logic;
+	output : out std_logic
+);
+end edge_detector;
+
+architecture behave of edge_detector is
+type stateMoore_type is (zero, edge, one);
+signal stateMoore_reg, stateMoore_next : stateMoore_type;
+begin
+
+process(clk)
+begin
+  if (rising_edge(clk) and clk_enable = '1') then
+    if rst = '1' then 
+      stateMoore_reg <= zero;                         -- resets current state 
+    else stateMoore_reg <= stateMoore_next;           -- store current state as next
+   end if;
+  end if;
+end process;
+
+process(stateMoore_reg,input)
+begin 
+        output <= '0';                                  -- set tick to zero (so that 'tick = 1' is available for 1 cycle only)
+        case stateMoore_reg is 
+            when zero =>                               -- if state is zero, 
+                if input = '1' then                    -- and level is 1
+                    stateMoore_next <= edge;           -- then go to state edge.
+                end if; 
+            when edge => 
+                output <= '1';                         -- set the output to 1.
+                if input = '1' then                    -- if level is 1, 
+                    stateMoore_next <= one;            -- go to state one,
+                else stateMoore_next <= zero;          -- else go to state zero.
+                end if;
+            when one =>
+                if input = '0' then                     -- if level is 0, 
+                    stateMoore_next <= zero;            -- then go to state zero.
+                end if;
+            when others => stateMoore_next <= stateMoore_reg; -- required: when no case statement is satisfied
+        end case; 
+    end process;  
+end behave;

@@ -1,0 +1,82 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all;
+use ieee.std_logic_arith.all;
+
+entity datalink_tx_tb is
+end datalink_tx_tb;
+
+architecture structural of datalink_tx_tb is 
+
+-- Component Declaration
+component datalink_tx
+port (
+		clk       : IN std_logic;
+		clk_enable: IN std_logic;
+		rst       : IN std_logic;
+		data      : IN std_logic_vector(3 DOWNTO 0);
+		pn_start  : IN std_logic;
+		output	  : OUT std_logic
+  );
+end component;
+
+for uut : datalink_tx use entity work.datalink_tx(behav);
+ 
+constant period : time := 100 ns;
+constant delay  : time :=  10 ns;
+signal end_of_sim : boolean := false;
+
+signal clk:  std_logic;
+signal rst:  std_logic;
+signal clk_enable: std_logic;
+signal data: std_logic_vector(3 downto 0);
+signal output:  std_logic;
+signal pn_start: std_logic;
+
+BEGIN
+
+uut: datalink_tx PORT MAP(
+      clk => clk,
+      rst => rst,
+      clk_enable => clk_enable,
+      data => data,
+      output => output,
+      pn_start => pn_start);
+
+clock : process
+   begin 
+       clk <= '0';
+       wait for period/2;
+     loop
+       clk <= '0';
+       wait for period/2;
+       clk <= '1';
+       wait for period/2;
+       exit when end_of_sim;
+     end loop;
+     wait;
+end process clock;
+	
+tb : PROCESS
+   BEGIN
+        clk_enable <= '1';
+        wait for period*2.2;
+        rst <= '1';
+        wait for period;
+        rst <='0';
+        wait for period*1;
+
+	FOR i IN 0 TO 15 LOOP 
+		data <= CONV_STD_LOGIC_VECTOR(i, 4);
+		pn_start <= '1';
+		WAIT FOR period*1;
+		pn_start <= '0';
+		WAIT FOR period*5;
+	END LOOP;
+                        
+      end_of_sim <= true;
+      wait;
+   END PROCESS;
+
+  END;

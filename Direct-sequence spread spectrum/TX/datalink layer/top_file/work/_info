@@ -1,0 +1,297 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/KUL/TX_volledig
+Edatalink_tb_tx
+w1545248866
+Z0 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 dC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file
+Z6 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx_tb.vhd
+Z7 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx_tb.vhd
+l0
+L6
+V1HCEka?ZNB[j5RSRYdeQz3
+!s100 goBf:oDoCoJm;BfYQfA2g3
+Z8 OP;C;10.4a;61
+32
+!s110 1545249153
+!i10b 1
+!s108 1545249153.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx_tb.vhd|
+Z10 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx_tb.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit -O0
+Z12 tExplicit 1
+Edatalink_tx
+Z13 w1545249144
+R3
+R4
+R5
+Z14 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx.vhd
+Z15 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx.vhd
+l0
+L3
+VRRP6[20FMXZKM34@iOmOB0
+!s100 XbJ<CRXaQNaZS]I;lQ85I2
+R8
+32
+Z16 !s110 1545249244
+!i10b 1
+Z17 !s108 1545249244.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx.vhd|
+Z19 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/top_file/datalink_tx.vhd|
+!i113 1
+R11
+R12
+Abehav
+R3
+R4
+Z20 DEx4 work 11 datalink_tx 0 22 RRP6[20FMXZKM34@iOmOB0
+l42
+L14
+VL]fe?M<4E<O=[cgVM[DDk1
+!s100 `W?Ki0^GAcZ>5jQbi^zZH0
+R8
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Edatalink_tx_tb
+Z21 w1545249240
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+l0
+L7
+VMkVOABjen;BHh4^[:1?e02
+!s100 =4f3?;Rk1HNHjYC8_Tg<40
+R8
+32
+R16
+!i10b 1
+R17
+R9
+R10
+!i113 1
+R11
+R12
+Astructural
+R20
+R0
+R1
+R2
+R3
+R4
+DEx4 work 14 datalink_tx_tb 0 22 MkVOABjen;BHh4^[:1?e02
+l37
+L10
+V6cZ@[TW2:<he@ddnn]Ne62
+!s100 6[U6V<:0Tnn:E6X=6LEOl1
+R8
+32
+R16
+!i10b 1
+R17
+R9
+R10
+!i113 1
+R11
+R12
+Esequence
+Z22 w1540554184
+R0
+R1
+R3
+R4
+R5
+Z23 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence.vhd
+Z24 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence.vhd
+l0
+L4
+V7K;<2VgD53@HnSfHDJm3m2
+!s100 ?nN1L[082>VlPDfDzgEaI2
+R8
+32
+R16
+!i10b 1
+R17
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence.vhd|
+Z26 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence.vhd|
+!i113 1
+R11
+R12
+Abehav
+R0
+R1
+R3
+R4
+Z27 DEx4 work 8 sequence 0 22 7K;<2VgD53@HnSfHDJm3m2
+l21
+L16
+Vn;=NL2J>hJ?4ZMaFmLkHg0
+!s100 53_oEYj0CPKLWiBSRf>XX2
+R8
+32
+R16
+!i10b 1
+R17
+R25
+R26
+!i113 1
+R11
+R12
+Esequence_tb
+Z28 w1540554344
+R0
+R1
+R2
+R3
+R4
+R5
+Z29 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence_tb.vhd
+Z30 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence_tb.vhd
+l0
+L6
+VHW]3_lF^3?KYcD0?g_D;]2
+!s100 73f[4A:<dc0kn8QCTGZjM2
+R8
+32
+R16
+!i10b 1
+R17
+Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence_tb.vhd|
+Z32 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/sequence/sequence_tb.vhd|
+!i113 1
+R11
+R12
+Asequence
+R27
+R0
+R1
+R2
+R3
+R4
+Z33 DEx4 work 11 sequence_tb 0 22 HW]3_lF^3?KYcD0?g_D;]2
+l36
+L9
+Z34 VJ@Z_LklOEI]n@`45hzYQN0
+Z35 !s100 [Rj<Q>L5Y58`Wa2D`kGUO2
+R8
+32
+R16
+!i10b 1
+R17
+R31
+R32
+!i113 1
+R11
+R12
+Eshiftregister
+Z36 w1540552948
+R0
+R1
+R3
+R4
+R5
+Z37 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister.vhd
+Z38 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister.vhd
+l0
+L5
+V][ESA6<eD<Pc0VF<;Q6gT0
+!s100 1o3R3J<VF4nUSLb@[DgFE1
+R8
+32
+R16
+!i10b 1
+R17
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister.vhd|
+Z40 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister.vhd|
+!i113 1
+R11
+R12
+Abehav
+R0
+R1
+R3
+R4
+Z41 DEx4 work 13 shiftregister 0 22 ][ESA6<eD<Pc0VF<;Q6gT0
+l22
+L18
+VTHzodI4OCmi>`eHngZVa52
+!s100 0ANJ6JX<UT`cH;6RE0D7=1
+R8
+32
+R16
+!i10b 1
+R17
+R39
+R40
+!i113 1
+R11
+R12
+Eshiftregister_tb
+Z42 w1540552770
+R0
+R1
+R2
+R3
+R4
+R5
+Z43 8C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister_tb.vhd
+Z44 FC:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister_tb.vhd
+l0
+L7
+VXi`BGJ;CMe>__L0L34cWT0
+!s100 abHW^SA0G5@XVEdYV7mg11
+R8
+32
+R16
+!i10b 1
+R17
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister_tb.vhd|
+Z46 !s107 C:/KUL/Digitale Synthese practicum/deftig/TX/datalink layer/shiftregister/shiftregister_tb.vhd|
+!i113 1
+R11
+R12
+Ashiftregister
+R41
+R0
+R1
+R2
+R3
+R4
+DEx4 work 16 shiftregister_tb 0 22 Xi`BGJ;CMe>__L0L34cWT0
+l39
+L10
+V[5Bb1KnIB0R00EH[4G20N2
+!s100 jS6^e7C00i9d`gdO[P48I0
+R8
+32
+R16
+!i10b 1
+R17
+R45
+R46
+!i113 1
+R11
+R12

@@ -1,0 +1,65 @@
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+ENTITY datalink_tx IS
+	PORT
+	(
+		clk       : IN std_logic;
+		clk_enable: IN std_logic;
+		rst       : IN std_logic;
+		data      : IN std_logic_vector(3 DOWNTO 0);
+		pn_start  : IN std_logic;
+		output	  : OUT std_logic
+	);
+END datalink_tx;
+ARCHITECTURE behav OF datalink_tx IS
+	SIGNAL shift_output : std_logic;
+	SIGNAL load_output : std_logic;
+
+component sequence is
+PORT
+	(
+		clk      : IN std_logic;
+		clk_enable : IN std_logic;
+		rst      : IN std_logic;
+		pn_start : IN std_logic;
+		load       : OUT std_logic; 
+		shift      : OUT std_logic
+	);
+end component;
+
+component shiftregister is
+	PORT (
+		shift  : IN  std_logic; 
+		load   : IN  std_logic;
+		clk    : IN  std_logic;
+		clk_enable : IN  std_logic;
+		rst    : IN  std_logic;
+		data   : IN  std_logic_vector(3 DOWNTO 0);
+		output : OUT std_logic
+    	 );
+end component;
+
+BEGIN
+
+sequence_int : sequence
+PORT MAP
+(
+	clk      => clk,
+	clk_enable   => clk_enable,
+	rst      => rst,
+	pn_start => pn_start,
+	load       => load_output,
+	shift       => shift_output
+);
+shiftregister_int: shiftregister
+PORT MAP
+(
+	clk    => clk,
+	clk_enable => clk_en,
+	rst    => rst,
+	shift     => shift_output,
+	load     => load_output,
+	output => output,
+	data   => data         
+);
+END behav;

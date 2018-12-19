@@ -1,0 +1,82 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity top_file is
+  port(
+    clk:  in std_logic;
+    clk_enable: in std_logic;
+    global_dip: in std_logic_vector(1 downto 0);
+    global_input_up: in std_logic;
+    global_rst: in std_logic;
+    data: in std_logic;
+    pn_start: out std_logic;
+    global_sdo_spread: out std_logic
+    );
+end top_file;
+
+architecture behav of top_file is
+
+component pn_generator is
+  port(
+  clk: in std_logic;
+	clk_enable: in std_logic;
+	rst: in std_logic;
+	pn_ml1: out std_logic;
+	pn_ml2: out std_logic;
+	pn_gold: out std_logic;
+	pn_start: out std_logic
+    );
+end component;
+
+component mux is
+port(
+	select_data: in std_logic_vector(1 downto 0);
+	xor_data: in std_logic;
+	xor_pn_ml1: in std_logic;
+	xor_pn_gold: in std_logic;
+	xor_pn_ml2: in std_logic;
+	sdo_spread: out std_logic
+  );
+end component;
+
+signal pn_ml1_int : std_logic;
+signal pn_ml2_int : std_logic;
+signal pn_gold_int : std_logic;
+
+signal xor_pn_ml1 : std_logic;
+signal xor_pn_ml2 : std_logic;
+signal xor_pn_gold : std_logic;
+
+begin
+  
+  xor_pn_ml1 <= pn_ml1_int xor data;
+  xor_pn_ml2 <= pn_ml2_int xor data;
+  xor_pn_gold <= pn_gold_int xor data;
+  
+  
+  
+pn_generator_int:  pn_generator
+  port map(
+    pn_ml1 => pn_ml1_int,
+    pn_ml2 => pn_ml2_int,
+    pn_gold => pn_gold_int,
+    pn_start => pn_start,
+    clk_enable => clk_enable,
+    rst => global_rst,
+    clk => clk
+    );
+    
+mux_int:  mux
+  port map(
+    xor_data => data,
+    xor_pn_ml1 => xor_pn_ml1,
+    xor_pn_ml2 => xor_pn_ml2,
+    xor_pn_gold => xor_pn_gold,
+    sdo_spread => global_sdo_spread,
+    select_data => global_dip
+    );
+
+end behav;
+
+
+
